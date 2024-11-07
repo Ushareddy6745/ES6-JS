@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //1.let
+    let x = 10;
+    console.log(x);
+
+    //2.const
+    const y = 20;
+    console.log(y); 
+
+    //3.arrow function
+  
+    let Multiplication=(a,b)=>{
+    console.log(a*b)
+    }
+    Multiplication(10,10)
+    
+    //or
+    let Multiplication1=(a,b)=>a*b
+    console.log(Multiplication1(10,10))
+
+    //4.Template literals
+
+    let string=`hello
+                Welcome 
+                to
+                India`
+    console.log(string)
+
+    //5.Destructuring Assignment
+    //array destructuring
+    let arr=["usha","usha6745@gmail.com",22]
+    const[name,email,age]=arr
+    console.log(name,email,age)
+
+    //string destructuring
+
+    let str="Ushapendyala"
+    const[a,b,c,d]=str
+    console.log(b)
+
+    //object deconstructor
+
+    let obj={
+        name:"usha",
+        age:22
+    }
+
+    const{name:user}=obj;
+    console.log(user)
+
+    //6.Default parameter
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+    sub(10)//Nan
+
+    function mul(a,b=10){
+        console.log(a*b);
+    }
+    mul(5)
+
+    //7.spread operator
+    //arrays
+    let arr1=[1,2,3,4,5]
+    let arr2=[...arr1]
+    console.log(arr2)
+    //
+    let arr3=[...arr1,6,7,8]
+    console.log(arr3)
+    //
+    let arr4=[1,2,3,...arr1]
+    console.log(arr4)
+
+    //
+    let arr5=["usha","ashwitha","jay","abhi"]
+    const[name1,name2,...rest]=arr5
+    console.log(name1,name2,rest)
+
+     //object
+     let obj1={name:"usha",age:22}
+     let obj2={...obj1,city:"bangalore"}
+     console.log(obj2)
+     
+
+     //
+     let obj3={name1:"usha",age1:22,city1:"bangalore"}
+     let obj4={...obj3,...obj1}
+     console.log(obj4)
+
+     //8.Rest Operator
+
+     function sum(u,v,w,...z){
+        console.log(u)
+        console.log(v)
+        console.log(w)
+        console.log(z)
+        
+     }
+     sum(3,5,6,7,8,9,0,5,3)
+
+     function sub(h,...g){
+        console.log(h)
+        console.log(...g)
+     }
+     sub(3,5,6,7,8,9,0,5,3)
+
+     //9.shallow copy
+
+     let arr6=["usha","hello","welcome"]
+     let arr7=arr6
+     arr6[0]="ash"
+     console.log(arr7)
+
+     //10.deep copy
+     let arr8=["usha","hello","welcome"]
+     let arr9=JSON.parse(JSON.stringify(arr8))
+     arr8[0]="ash"
+     console.log(arr9)
+
+     let obj11={
+        name:"usha",
+     }
+     let obj12=JSON.parse(JSON.stringify(obj1))
+     obj11.name="ash"
+     console.log(obj12)
+
+
+
+    </script>
+</body>
+</html>
